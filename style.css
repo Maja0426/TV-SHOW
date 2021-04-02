@@ -1,0 +1,221 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: monospace;
+}
+
+body {
+  width: 100%;
+  height: 100%;
+}
+
+.header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  text-align: left;
+  margin: 5rem;
+}
+
+h1 {
+  font-size: 4rem;
+}
+
+h2 {
+  font-size: 2.5rem;
+}
+
+form {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.ltitle {
+  margin: 15px auto;
+  font-size: 1rem;
+}
+
+label {
+  display: inline-block;
+  margin: 1rem auto;
+}
+
+.ltitle {
+  font-size: 1.5rem;
+}
+
+input,
+button {
+  padding: 0.5rem;
+  font-size: 1.2rem;
+}
+
+input {
+  border: none;
+  outline: none;
+  border-bottom: 2px solid #ccc;
+}
+
+input:focus {
+  outline: none;
+  border-bottom: 2px solid #000;
+}
+
+input::placeholder {
+  text-align: center;
+  font-size: 1rem;
+}
+
+button {
+  background-color: #000;
+  color: #fff;
+  border-radius: 3px;
+  border: 2px solid #000;
+  transition: all 0.3s ease;
+}
+
+button:hover {
+  cursor: pointer;
+  background-color: #fff;
+  color: #000;
+}
+
+.wrapper {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  align-items: flex-end;
+  flex-wrap: wrap;
+  gap: 15px;
+  margin: 2rem 0;
+}
+
+section {
+  margin-bottom: 2rem;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  flex-wrap: wrap;
+  gap: 10px;
+  overflow: hidden;
+}
+
+.main_modal {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.modal {
+  padding: 3rem;
+  line-height: 1.3;
+  background-image: linear-gradient(
+    rgba(250, 243, 243, 0.95),
+    rgba(250, 243, 243, 0.95)
+  );
+  color: #000;
+  z-index: 10;
+  box-shadow: 10px 10px 15px rgba(0, 0, 0, 0.5);
+}
+
+.summary {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+}
+
+.sum {
+  padding-bottom: 3rem;
+  width: 70%;
+}
+
+.poster {
+  width: 30%;
+}
+
+.sum p {
+  font-size: 1.4rem;
+  padding: 1rem;
+  text-align: left;
+}
+
+.poster img {
+  width: 100%;
+}
+
+img {
+  transition: all 0.3s ease;
+}
+
+section img:hover {
+  cursor: pointer;
+  transform: scale(1.3);
+}
+
+hr {
+  margin: 5px 0;
+}
+
+p {
+  text-align: center;
+  font-size: 1rem;
+}
+
+section p:first-child {
+  font-weight: bold;
+  font-size: 1.2rem;
+  text-transform: uppercase;
+}
+
+section p:nth-of-type(2) {
+  padding: 5px;
+  font-size: 1rem;
+}
+
+@media (max-width:1024px) {
+	.modal {
+		width: 90vw;
+		max-height: 100vh;
+}
+
+@media (max-width:768px) {
+	.button {
+		text-align:center;
+		padding-top: 1rem;
+	}
+}
+
+@media (max-width:430px) {
+  	.header {
+		flex-direction: column;
+		text-align: center;
+	}
+  input {
+    margin-bottom: 1.5rem;
+  }
+.modal {
+	padding: .5rem;
+	overflow: auto;
+}
+
+.poster {
+	width: 100%;
+	padding: .5rem;
+}
+.summary {
+  flex-direction: column;
+  width: 100%;
+}
+
+.sum {
+  padding-bottom: .5rem;
+  width: 100%;
+}
+	.sum p{
+		font-size: 12px;
+	}
+}
